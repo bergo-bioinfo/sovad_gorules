@@ -1,0 +1,633 @@
+{
+  "contentType": "application/vnd.gorules.decision",
+  "edges": [
+    {
+      "id": "fc30a32b-e5ac-4e7b-b481-fdabaee7fd90",
+      "sourceId": "fb983d4f-dc3f-4c1b-929f-0bee481a20b5",
+      "type": "edge",
+      "targetId": "a0fdaf72-9f5d-468d-953a-4f6906400df4"
+    },
+    {
+      "id": "41d54af7-3d54-4be5-89ad-e972cf3d2c98",
+      "sourceId": "fb983d4f-dc3f-4c1b-929f-0bee481a20b5",
+      "type": "edge",
+      "targetId": "77d74024-bf97-4711-aad9-9b12d93a1d69"
+    },
+    {
+      "id": "b608884a-66fc-42c5-ad74-1a9295662d82",
+      "sourceId": "fb983d4f-dc3f-4c1b-929f-0bee481a20b5",
+      "type": "edge",
+      "targetId": "12d6868d-85f6-45ee-9fe4-dd0a93eb2d8d"
+    },
+    {
+      "id": "c609ba0d-4b1c-41af-a1a6-2be0f39992bf",
+      "sourceId": "fb983d4f-dc3f-4c1b-929f-0bee481a20b5",
+      "type": "edge",
+      "targetId": "1f41566e-c038-443b-b455-7c45ef923e97"
+    },
+    {
+      "id": "00464daf-76ee-4a24-82a7-b1dff7a85d25",
+      "sourceId": "a0fdaf72-9f5d-468d-953a-4f6906400df4",
+      "type": "edge",
+      "targetId": "3be93de3-d376-4051-bb87-ea3d29c6de9e"
+    },
+    {
+      "id": "585ae174-0422-41ec-b719-27cfdc34e953",
+      "sourceId": "77d74024-bf97-4711-aad9-9b12d93a1d69",
+      "type": "edge",
+      "targetId": "3be93de3-d376-4051-bb87-ea3d29c6de9e"
+    },
+    {
+      "id": "024fd009-0d6f-4f3c-89bb-7e733dd4578c",
+      "sourceId": "12d6868d-85f6-45ee-9fe4-dd0a93eb2d8d",
+      "type": "edge",
+      "targetId": "3be93de3-d376-4051-bb87-ea3d29c6de9e"
+    },
+    {
+      "id": "6ea067a7-0b8b-4b04-9e2c-fee5d5a7f5d5",
+      "sourceId": "1f41566e-c038-443b-b455-7c45ef923e97",
+      "type": "edge",
+      "targetId": "3be93de3-d376-4051-bb87-ea3d29c6de9e"
+    },
+    {
+      "id": "46957fc9-9de2-4e3a-9c74-31ed32858d2c",
+      "sourceId": "3be93de3-d376-4051-bb87-ea3d29c6de9e",
+      "type": "edge",
+      "targetId": "7e5e2b0a-2083-4304-8ede-0578745ba229"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "fb983d4f-dc3f-4c1b-929f-0bee481a20b5",
+      "type": "inputNode",
+      "position": {
+        "x": 340,
+        "y": 455
+      },
+      "name": "Request"
+    },
+    {
+      "id": "a0fdaf72-9f5d-468d-953a-4f6906400df4",
+      "type": "decisionTableNode",
+      "position": {
+        "x": 720,
+        "y": 220
+      },
+      "name": "isPathogenic",
+      "content": {
+        "hitPolicy": "first",
+        "inputs": [
+          {
+            "id": "1a6ea6de-ff3a-4215-868b-b17a423d70ac",
+            "type": "expression",
+            "field": "PA",
+            "name": "PStandAlone",
+            "defaultValue": ""
+          },
+          {
+            "id": "9a0976ae-eb95-4859-ae04-ada8e11e99b7",
+            "type": "expression",
+            "field": "PVS",
+            "name": "PVeryStrong",
+            "defaultValue": ""
+          },
+          {
+            "id": "9107e54a-3665-4f6b-8c27-ee785cde03ba",
+            "type": "expression",
+            "field": "PS",
+            "name": "PStrong",
+            "defaultValue": ""
+          },
+          {
+            "id": "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072",
+            "type": "expression",
+            "field": "PM",
+            "name": "PModerate",
+            "defaultValue": ""
+          },
+          {
+            "id": "a29910ef-0ee4-4d5a-b115-280605ca3366",
+            "type": "expression",
+            "field": "PP",
+            "name": "PSupporting",
+            "defaultValue": ""
+          },
+          {
+            "id": "0bac28b9-68ed-4ded-ba67-11d5cbc22bdf",
+            "type": "expression",
+            "field": "PMPP",
+            "name": "PM/PP"
+          }
+        ],
+        "outputs": [
+          {
+            "field": "isP",
+            "id": "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928",
+            "name": "isPathogenic",
+            "type": "expression"
+          }
+        ],
+        "rules": [
+          {
+            "_id": "2708425b-5d80-4c07-a2bb-f1d5a8bef1f2",
+            "1a6ea6de-ff3a-4215-868b-b17a423d70ac": ">= 1",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": "",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": "",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": "",
+            "0bac28b9-68ed-4ded-ba67-11d5cbc22bdf": "",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "5709fb07-9300-4c23-9f38-53806672400d",
+            "1a6ea6de-ff3a-4215-868b-b17a423d70ac": "",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": ">= 1",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": ">= 1",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": "",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": "",
+            "0bac28b9-68ed-4ded-ba67-11d5cbc22bdf": "",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "8510db58-7a93-4ea4-a8db-4b8b9426f820",
+            "_description": "",
+            "1a6ea6de-ff3a-4215-868b-b17a423d70ac": "",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": ">= 1",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": "",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": "",
+            "0bac28b9-68ed-4ded-ba67-11d5cbc22bdf": "PM + PP >= 2",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "af206cc4-6d48-40a0-949d-4a7c827a75fe",
+            "1a6ea6de-ff3a-4215-868b-b17a423d70ac": "",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": ">= 1",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": "",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": "",
+            "0bac28b9-68ed-4ded-ba67-11d5cbc22bdf": "PP >= 2",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "71150605-fb0a-401f-9c1a-d5559a6a2d37",
+            "1a6ea6de-ff3a-4215-868b-b17a423d70ac": "",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": ">= 1",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": "",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": "",
+            "0bac28b9-68ed-4ded-ba67-11d5cbc22bdf": "PM >= 2",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "da268a79-4a7b-4e4a-998b-b2c8050ab7b2",
+            "1a6ea6de-ff3a-4215-868b-b17a423d70ac": "",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": "",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": ">= 2",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": "",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": "",
+            "0bac28b9-68ed-4ded-ba67-11d5cbc22bdf": "",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "9ae0e532-68f8-4930-9548-816a9c60dbe1",
+            "1a6ea6de-ff3a-4215-868b-b17a423d70ac": "",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": "",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "1",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": ">= 3",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": "",
+            "0bac28b9-68ed-4ded-ba67-11d5cbc22bdf": "",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "40ce812d-cf92-474a-afb0-4229b89bd437",
+            "1a6ea6de-ff3a-4215-868b-b17a423d70ac": "",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": "",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "1",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": "2",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": ">= 2",
+            "0bac28b9-68ed-4ded-ba67-11d5cbc22bdf": "",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "24b652c3-5ce1-4ce6-8253-fdb1082c2b2d",
+            "1a6ea6de-ff3a-4215-868b-b17a423d70ac": "",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": "",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "1",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": "1",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": ">= 4",
+            "0bac28b9-68ed-4ded-ba67-11d5cbc22bdf": "",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "7e5e2b0a-2083-4304-8ede-0578745ba229",
+      "type": "outputNode",
+      "position": {
+        "x": 1585,
+        "y": 445
+      },
+      "name": "Response"
+    },
+    {
+      "id": "12d6868d-85f6-45ee-9fe4-dd0a93eb2d8d",
+      "type": "decisionTableNode",
+      "position": {
+        "x": 710,
+        "y": 535
+      },
+      "name": "isBenign",
+      "content": {
+        "hitPolicy": "first",
+        "inputs": [
+          {
+            "id": "b2d25997-8b78-4c10-8200-71214f102be5",
+            "type": "expression",
+            "field": "BA",
+            "name": "BStandAlone",
+            "defaultValue": "0"
+          },
+          {
+            "id": "67aeac86-91e4-41d5-81d1-cc769998bb26",
+            "type": "expression",
+            "field": "BS",
+            "name": "BStrong",
+            "defaultValue": "0"
+          }
+        ],
+        "outputs": [
+          {
+            "field": "isB",
+            "id": "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928",
+            "name": "isBenign",
+            "type": "expression"
+          }
+        ],
+        "rules": [
+          {
+            "_id": "076eaf34-17d0-4df4-a08c-307c91fed5d3",
+            "b2d25997-8b78-4c10-8200-71214f102be5": ">= 1",
+            "67aeac86-91e4-41d5-81d1-cc769998bb26": "",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "0e670e56-32eb-4c76-96c8-699f26eb1748",
+            "b2d25997-8b78-4c10-8200-71214f102be5": "",
+            "67aeac86-91e4-41d5-81d1-cc769998bb26": ">= 2",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "77d74024-bf97-4711-aad9-9b12d93a1d69",
+      "type": "decisionTableNode",
+      "position": {
+        "x": 720,
+        "y": 360
+      },
+      "name": "isLikelyPathogenic",
+      "content": {
+        "hitPolicy": "first",
+        "inputs": [
+          {
+            "id": "9a0976ae-eb95-4859-ae04-ada8e11e99b7",
+            "type": "expression",
+            "field": "PVS",
+            "name": "PVeryStrong",
+            "defaultValue": "0"
+          },
+          {
+            "id": "9107e54a-3665-4f6b-8c27-ee785cde03ba",
+            "type": "expression",
+            "field": "PS",
+            "name": "PStrong",
+            "defaultValue": "0"
+          },
+          {
+            "id": "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072",
+            "type": "expression",
+            "field": "PM",
+            "name": "PModerate",
+            "defaultValue": "0"
+          },
+          {
+            "id": "a29910ef-0ee4-4d5a-b115-280605ca3366",
+            "type": "expression",
+            "field": "PP",
+            "name": "PSupporting",
+            "defaultValue": "0"
+          }
+        ],
+        "outputs": [
+          {
+            "field": "isLP",
+            "id": "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928",
+            "name": "isLikelyPathogenic",
+            "type": "expression"
+          }
+        ],
+        "rules": [
+          {
+            "_id": "c6a5f909-9933-400f-aa7e-a05eafbddae0",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": ">= 1",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": "1",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": "",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "71d569f2-f34d-40eb-b64b-5f838c05bb39",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": "",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "1",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": "1,2",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": "",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "38572b2d-ee87-4fdc-bee8-bbadfbf8f88a",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": "",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "1",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": "",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": ">= 2",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "587fbfee-d602-4f61-ab12-05041529ee3d",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": "",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": ">= 3",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": "",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "f4d27597-3b04-4582-b1f6-8e1407bf11ad",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": "",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": ">= 2",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": ">= 2",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "135bc64f-9cde-49d3-9b52-fc058749ebe6",
+            "9a0976ae-eb95-4859-ae04-ada8e11e99b7": "",
+            "9107e54a-3665-4f6b-8c27-ee785cde03ba": "",
+            "a87f57d6-35e3-4ab8-8f4a-5fc2f50ec072": "1",
+            "a29910ef-0ee4-4d5a-b115-280605ca3366": ">= 4",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1f41566e-c038-443b-b455-7c45ef923e97",
+      "type": "decisionTableNode",
+      "position": {
+        "x": 710,
+        "y": 675
+      },
+      "name": "isLikelyBenign",
+      "content": {
+        "hitPolicy": "first",
+        "inputs": [
+          {
+            "id": "67aeac86-91e4-41d5-81d1-cc769998bb26",
+            "type": "expression",
+            "field": "BS",
+            "name": "BStrong",
+            "defaultValue": "0"
+          },
+          {
+            "id": "b2c10bc8-ca08-4473-b50c-f1631cd714d8",
+            "type": "expression",
+            "field": "BP",
+            "name": "BSupporting",
+            "defaultValue": "0"
+          }
+        ],
+        "outputs": [
+          {
+            "field": "isLB",
+            "id": "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928",
+            "name": "isLikelyBenign",
+            "type": "expression",
+            "defaultValue": ""
+          }
+        ],
+        "rules": [
+          {
+            "_id": "5d1a9fbe-54c4-4aa6-af26-65be161f926e",
+            "67aeac86-91e4-41d5-81d1-cc769998bb26": "1",
+            "b2c10bc8-ca08-4473-b50c-f1631cd714d8": "1",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          },
+          {
+            "_id": "b09d6725-da8b-416e-a567-bbc4cdd9c361",
+            "67aeac86-91e4-41d5-81d1-cc769998bb26": "",
+            "b2c10bc8-ca08-4473-b50c-f1631cd714d8": ">= 2",
+            "b122ed50-9f8c-4d82-a1ee-b7e5f1afc928": "1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "isVUS",
+      "content": {
+        "hitPolicy": "first",
+        "inputs": [
+          {
+            "id": "fbd93f14-4aaa-4470-a9b9-8ac18dca0572",
+            "name": "isPathogenic",
+            "field": "isP",
+            "type": "expression",
+            "defaultValue": ""
+          },
+          {
+            "id": "bb408cd4-27af-44e2-affe-ac05c2a1e665",
+            "name": "isLikelyPathogenic",
+            "field": "isLP",
+            "type": "expression",
+            "defaultValue": ""
+          },
+          {
+            "id": "09a47f79-7454-4cf7-b3a5-5c5cd9377b35",
+            "name": "isBenign",
+            "field": "isB",
+            "type": "expression",
+            "defaultValue": ""
+          },
+          {
+            "id": "a067ea12-63a0-4cb3-8f2c-7041b97968c4",
+            "name": "isLikelyBenign",
+            "field": "isLB",
+            "type": "expression",
+            "defaultValue": ""
+          }
+        ],
+        "outputs": [
+          {
+            "id": "e4da0f93-9775-4568-a6b8-adeccf1bf83d",
+            "name": "Pathogenicity",
+            "field": "pathogenicity",
+            "type": "expression",
+            "defaultValue": ""
+          }
+        ],
+        "rules": [
+          {
+            "_id": "b6792e40-88e7-4ac5-a6ea-90ff40152cc3",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "1",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "1",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "1",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "1",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Uncertain significance\""
+          },
+          {
+            "_id": "a542187f-f96d-4c95-b670-fdd427cb13a6",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "1",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "1",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "1",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Uncertain significance\""
+          },
+          {
+            "_id": "56cb58ff-fbfb-4915-b59d-be373bc6c898",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "1",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "1",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "1",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Uncertain significance\""
+          },
+          {
+            "_id": "ddd9997f-9d06-49f1-b313-a259cf978e75",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "1",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "1",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Pathogenic\""
+          },
+          {
+            "_id": "f257dc5e-cc65-4683-95a7-4c48f72217d0",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "1",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "1",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "1",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Uncertain significance\""
+          },
+          {
+            "_id": "99a935f4-9c7c-446d-86ae-b1987cb9d4ea",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "1",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "1",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Uncertain significance\""
+          },
+          {
+            "_id": "c69eeb6a-9a54-49d1-9734-b80af892ed99",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "1",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "1",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Uncertain significance\""
+          },
+          {
+            "_id": "c5a8d7de-eb99-43cf-9773-7b87133079b7",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "1",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Pathogenic\""
+          },
+          {
+            "_id": "566ecfe9-4cb3-45d7-b3b0-1decd8509258",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "1",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "1",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "1",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Uncertain significance\""
+          },
+          {
+            "_id": "e6d7c41d-6b75-4a93-becb-b118790921d3",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "1",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "1",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Uncertain significance\""
+          },
+          {
+            "_id": "89b1ac08-312a-4098-9dc1-79a43d4d8403",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "1",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "1",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Uncertain significance\""
+          },
+          {
+            "_id": "cc587693-3ce3-47a4-9d3f-7820e03bfb5a",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "1",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Likely pathogenic\""
+          },
+          {
+            "_id": "9bdfb0cb-17b6-4219-a669-c75121b8fca9",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "1",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "1",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Benign\""
+          },
+          {
+            "_id": "dc996c94-ffa3-4266-9fe2-22499e191152",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "1",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Benign\""
+          },
+          {
+            "_id": "7d6dc956-77ac-43aa-a321-ba316680f703",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "1",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Likely benign\""
+          },
+          {
+            "_id": "edc38a8c-d71a-4279-9661-a6525ee10991",
+            "_description": "",
+            "fbd93f14-4aaa-4470-a9b9-8ac18dca0572": "",
+            "bb408cd4-27af-44e2-affe-ac05c2a1e665": "",
+            "09a47f79-7454-4cf7-b3a5-5c5cd9377b35": "",
+            "a067ea12-63a0-4cb3-8f2c-7041b97968c4": "",
+            "e4da0f93-9775-4568-a6b8-adeccf1bf83d": "\"Uncertain significance\""
+          }
+        ]
+      },
+      "id": "3be93de3-d376-4051-bb87-ea3d29c6de9e",
+      "position": {
+        "x": 1190,
+        "y": 445
+      },
+      "type": "decisionTableNode"
+    }
+  ]
+}
