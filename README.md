@@ -140,10 +140,10 @@ Class 3—Unknown        Other criteria are unmet
 +                        >=2 PM + >=2 PP 
                        1 PM + >=4 PP 
 - Class 5—Pathogenic     1 PA
--                        1 PVS + >=1 PS
--                        1 PVS + >=2 PM/PP
 + Class 5—Pathogenic     >=1 PA
+-                        1 PVS + >=1 PS
 +                        >=1 PVS + >=1 PS
+-                        1 PVS + >=2 PM/PP
 +                        >=1 PVS + >=2 PM/PP
                        >=2 PS
                        1 PS + >=3 PM
