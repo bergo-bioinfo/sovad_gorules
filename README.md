@@ -122,8 +122,8 @@ Differences between original and adapated tables above.
 ```diff
 Pathogenicity classification based on the relative weight of the criteria.
 
-{- Class 1—Benign         1 BA -}
-{+ Class 1—Benign         >=1 BA +}
+- Class 1—Benign         1 BA
++ Class 1—Benign         >=1 BA
                        >=2 BS
 Class 2—Likely benign  1 BS + 1 BP
                        >=2 BP
@@ -131,20 +131,20 @@ Class 3—Unknown        Other criteria are unmet
  significance          Criteria for benign and
                        pathogenic are 
                        contradictory
-{- Class 4—Likely         1 PVS + 1 PM -}
-{+ Class 4—Likely         >=1 PVS + 1 PM +}
+- Class 4—Likely         1 PVS + 1 PM
++ Class 4—Likely         >=1 PVS + 1 PM
  pathogenic            1 PS + 1-2 PM
                        1 PS + >=2 PP
                        >=3 PM
-{-                        2 PM + >=2 PP  -}
-{+                        >=2 PM + >=2 PP  +}
+-                        2 PM + >=2 PP 
++                        >=2 PM + >=2 PP 
                        1 PM + >=4 PP 
-{- Class 5—Pathogenic     1 PA -}
-{-                        1 PVS + >=1 PS -}
-{-                        1 PVS + >=2 PM/PP -}
-{+ Class 5—Pathogenic     >=1 PA +}
-{+                        >=1 PVS + >=1 PS +}
-{+                        >=1 PVS + >=2 PM/PP +}
+- Class 5—Pathogenic     1 PA
+-                        1 PVS + >=1 PS
+-                        1 PVS + >=2 PM/PP
++ Class 5—Pathogenic     >=1 PA
++                        >=1 PVS + >=1 PS
++                        >=1 PVS + >=2 PM/PP
                        >=2 PS
                        1 PS + >=3 PM
                        1 PS + 2 PM + >=2 PP 
