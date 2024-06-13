@@ -20,6 +20,7 @@ EXPECTED_EVALS = {
         {"BS": 3},
     ],
     "Likely benign": [
+        {"BS": 1, "BP": 1, "PP": 1},
         {"BS": 1, "BP": 1},
         {"BP": 2},
         {"BP": 3},
